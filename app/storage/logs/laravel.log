@@ -1,0 +1,47 @@
+[2014-09-20 03:48:10] production.ERROR: exception 'InvalidArgumentException' with message 'Command "generate:migrate" is not defined.
+
+Did you mean one of these?
+    generate:pivot
+    generate:migration
+    generate:resource
+    generate:scaffold
+    generate:publish-templates
+    generate:seed
+    generate:view
+    generate:controller
+    generate:model' in C:\xampp\htdocs\stallion\vendor\symfony\console\Symfony\Component\Console\Application.php:564
+Stack trace:
+#0 C:\xampp\htdocs\stallion\vendor\symfony\console\Symfony\Component\Console\Application.php(190): Symfony\Component\Console\Application->find('generate:migrat...')
+#1 C:\xampp\htdocs\stallion\vendor\symfony\console\Symfony\Component\Console\Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\stallion\artisan(59): Symfony\Component\Console\Application->run()
+#3 {main} [] []
+[2014-09-20 03:50:31] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'CreateUsers' not found' in C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:301
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-20 03:53:13] production.ERROR: exception 'InvalidArgumentException' with message 'Command "generate:seeder" is not defined.
+
+Did you mean one of these?
+    generate:seed
+    db:seed
+    generate:view
+    generate:model
+    generate:publish-templates
+    generate:scaffold
+    generate:pivot
+    generate:controller
+    generate:migration
+    generate:resource' in C:\xampp\htdocs\stallion\vendor\symfony\console\Symfony\Component\Console\Application.php:564
+Stack trace:
+#0 C:\xampp\htdocs\stallion\vendor\symfony\console\Symfony\Component\Console\Application.php(190): Symfony\Component\Console\Application->find('generate:seeder')
+#1 C:\xampp\htdocs\stallion\vendor\symfony\console\Symfony\Component\Console\Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\stallion\artisan(59): Symfony\Component\Console\Application->run()
+#3 {main} [] []
+[2014-09-20 04:23:35] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';', expecting ']'' in C:\xampp\htdocs\stallion\app\database\seeds\UsersTableSeeder.php:18
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-20 04:23:54] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';', expecting ']'' in C:\xampp\htdocs\stallion\app\database\seeds\UsersTableSeeder.php:19
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
