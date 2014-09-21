@@ -17,12 +17,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $table = 'users';
 
 	public static $rules = array(
-		'username' => 'required|min:5',
+		'username' => 'required|alpha_num|min:5|unique:users',
 		'fullname'=>'required|min:10',
 		'email'=>'required|email|unique:users',
-		'about' => 'required|alpha|min:10',
+		'about' => 'required|min:10',
 		'password'=>'required|alpha_num|between:6,12|confirmed',
-		'confirm-password'=>'required|alpha_num|between:6,12'
+		'password_confirmation'=>'required|alpha_num|between:6,12'
 	);
 	/**
 	 * The attributes excluded from the model's JSON form.

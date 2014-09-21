@@ -26,12 +26,12 @@ class UsersController extends BaseController {
 		    $user->type = 'Integrant';
 		    $user->password = Hash::make(Input::get('password'));
 		    $user->save();
-		 	$user_id = $user->id;
+		 	$id_user = $user->id;
 		 	$userProfile = new UserProfile;
 		 	$userProfile->fullname = Input::get('fullname');
 		 	$userProfile->website = Input::get('website');
 		 	$userProfile->about = Input::get('about');
-		 	$userProfile->user_id = $user_id;
+		 	$userProfile->id_user = $id_user;
 		 	$userProfile->save();
 		    $status = ['status' => 1, 'message' => 'Registro satisfactorio'];
 		} else {
