@@ -1,0 +1,58 @@
+<?php $__env->startSection('tasks'); ?>
+	<h2>User Profile</h2>
+
+	<button id="crear-usuarios" class="btn btn-primary" data-toggle="modal" data-target="#usersModal">
+		Crear usuario
+	</button>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('read'); ?>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Usuario</th>
+				<th>Email</th>
+				<th>Tipo</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach($users as $key => $user): ?>
+			<tr>
+				<td><?php echo $user->id; ?></td>
+				<td><?php echo $user->username; ?></td>
+				<td><?php echo $user->email; ?></td>
+				<td><?php echo $user->type; ?></td>
+				<td><?php echo HTML::link($user->id); ?></td>
+			</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+
+
+	<div class="modal fade" id="usersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+					<h4 class="modal-title" id="myModalLabel">Crear usuario</h4>
+				</div>
+				<div class="modal-body">
+				    <?php if(Session::has('message')): ?>
+				        <p class="alert"><?php echo Session::get('message'); ?></p>
+				    <?php endif; ?>
+					<?php echo $__env->make('users.create', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+					<button id="guardarUsuario" type="button" class="btn btn-primary">Guardar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('layout.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

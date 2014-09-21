@@ -1,4 +1,12 @@
-<?php $__env->startSection('content'); ?>
+<?php $__env->startSection('tasks'); ?>
+	<h2>User Profile</h2>
+
+	<button class="btn btn-primary" data-toggle="modal" data-target="#usersModal">
+		Crear usuario
+	</button>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('read'); ?>
 
 	<table class="table table-striped">
 		<thead>
@@ -23,11 +31,93 @@
 		</tbody>
 	</table>
 
+	<div id="create-users">
+		<div class="modal fade" id="usersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+						<h4 class="modal-title" id="myModalLabel">Crear usuario</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<?php echo HTML::ul($errors->all()); ?>
+
+
+							<div class="form-group">
+								<?php echo Form::label('username', 'Usuario', ['class' => 'col-sm-4 control-label']); ?>
+
+								<div class="col-sm-6">
+									<?php echo Form::text('username', Input::old('username'), array('class' => 'form-control')); ?>
+
+								</div>
+							</div>
+
+							<div class="form-group">
+								<?php echo Form::label('fullname', 'Nombre completo', ['class' => 'col-sm-4 control-label']); ?>
+
+								<div class="col-sm-6">
+									<?php echo Form::text('fullname', Input::old('fullname'), array('class' => 'form-control')); ?>
+
+								</div>
+							</div>
+
+							<div class="form-group">
+								<?php echo Form::label('email', 'Correo electrónico', ['class' => 'col-sm-4 control-label']); ?>
+
+								<div class="col-sm-6">
+									<?php echo Form::text('email', Input::old('email'), array('class' => 'form-control')); ?>
+
+								</div>
+							</div>
+
+							<div class="form-group">
+								<?php echo Form::label('password', 'Contraseña', ['class' => 'col-sm-4 control-label']); ?>
+
+								<div class="col-sm-6">
+									<?php echo Form::text('password', Input::old('password'), array('class' => 'form-control')); ?>
+
+								</div>
+							</div>
+
+							<div class="form-group">
+								<?php echo Form::label('confirm-password', 'Repetir contraseña', ['class' => 'col-sm-4 control-label']); ?>
+
+								<div class="col-sm-6">
+									<?php echo Form::text('confirm-password', Input::old('confirm-password'), array('class' => 'form-control')); ?>
+
+								</div>
+							</div>
+
+							<div class="form-group">
+								<?php echo Form::label('website', 'Sitio Web', ['class' => 'col-sm-4 control-label']); ?>
+
+								<div class="col-sm-6">
+									<?php echo Form::text('website', Input::old('website'), array('class' => 'form-control')); ?>
+
+								</div>
+							</div>
+
+							<div class="form-group">
+								<?php echo Form::label('about', 'Bio', ['class' => 'col-sm-4 control-label']); ?>
+
+								<div class="col-sm-6">
+									<?php echo Form::text('about', Input::old('about'), array('class' => 'form-control')); ?>
+
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+						<button type="button" class="btn btn-primary">Guardar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <?php $__env->stopSection(); ?>
 
-<?php $__env->startSection('tasks'); ?>
-	<h2>User Profile</h2>
 
-	<a href="users/create"> Crear usuario</a>
-<?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -24,7 +24,7 @@
 			        	<?php echo $__env->yieldContent('tasks'); ?>
 			        </div>
 			        <div class="col-sm-9 col-md-8">
-			        	<?php echo $__env->yieldContent('content'); ?>
+			        	<?php echo $__env->yieldContent('read'); ?>
 			        </div>
 			        <div class="col-xs-12">
 			        	<?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
@@ -33,9 +33,8 @@
 	        </div>
 	        <div class="col-sm-1"></div>
 	    </div>
-		
-
 		<script src="<?php echo asset('assets/js/jquery.min.js'); ?>"></script>
 		<script src="<?php echo asset('assets/js/bootstrap.min.js'); ?>"></script>
+		<script src="<?php echo asset('assets/js/main.js'); ?>"></script>
 	</body>
 </html>

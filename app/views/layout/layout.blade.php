@@ -24,7 +24,7 @@
 			        	@yield('tasks')
 			        </div>
 			        <div class="col-sm-9 col-md-8">
-			        	@yield('content')
+			        	@yield('read')
 			        </div>
 			        <div class="col-xs-12">
 			        	@include('layout.footer')
@@ -33,9 +33,8 @@
 	        </div>
 	        <div class="col-sm-1"></div>
 	    </div>
-		
-
 		<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 		<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('assets/js/main.js') }}"></script>
 	</body>
 </html>
