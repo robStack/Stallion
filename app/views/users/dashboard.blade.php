@@ -27,7 +27,11 @@
 				<td>{{ $user->username }}</td>
 				<td>{{ $user->email }}</td>
 				<td>{{ $user->type }}</td>
-				<td>{{ HTML::link($user->id) }}</td>
+				<td>
+					<button id="verUsuario" type="button" class="btn btn-info"><span class="glyphicon glyphicon-user"></span> Perfil</button>
+					<button id="editarUsuario" type="button" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span> Editar</button>
+					<button id="eliminarUsuario" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Eliminar</button>
+				</td>
 			</tr>
 			@endforeach
 		</tbody>
@@ -42,10 +46,20 @@
 					<h4 class="modal-title" id="myModalLabel">Crear usuario</h4>
 				</div>
 				<div class="modal-body">
-				    @if(Session::has('message'))
-				        <p class="alert">{{ Session::get('message') }}</p>
-				    @endif
-					@include('users.create')
+					<div id="f1_container">
+						<div id="f1_card" class="shadow">
+							<div id="frontface" class="front face">
+								@if(Session::has('message'))
+							        <p class="alert">{{ Session::get('message') }}</p>
+							    @endif
+								@include('users.create')
+							</div>
+							<div id="backface" class="back face center invisible">
+								
+							</div>
+						</div>
+					</div>	
+				    
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>

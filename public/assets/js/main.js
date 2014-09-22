@@ -9,7 +9,11 @@ $(function() {
 			data: user,
 			success: function(response){
 				if(response.status){
-					console.log('True');
+					$('#f1_container ').addClass('flip');
+					$('#frontface').addClass('invisible');
+					$('#backface').removeClass('invisible');
+					$('#backface').html(response.message);
+					$('.modal-footer').addClass('invisible');
 				}
 				else{
 					var mensajes = response.errores;

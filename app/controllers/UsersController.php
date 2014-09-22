@@ -20,8 +20,9 @@ class UsersController extends BaseController {
 		$validator = Validator::make(Input::all(), User::$rules);
 
 		if ($validator->passes()) {
+			sleep(3);
 		    $user = new User;
-		    $user->username = Input::get('username');
+		    $user->username = strtolower(Input::get('username'));
 		    $user->email = Input::get('email');
 		    $user->type = 'Integrant';
 		    $user->password = Hash::make(Input::get('password'));
@@ -33,7 +34,7 @@ class UsersController extends BaseController {
 		 	$userProfile->about = Input::get('about');
 		 	$userProfile->id_user = $id_user;
 		 	$userProfile->save();
-		    $status = ['status' => 1, 'message' => 'Registro satisfactorio'];
+		    $status = ['status' => 1, 'message' => '<img src="assets/img/addUser.png"><br /><p>Registro satisfactorio</p>'];
 		} else {
 		    $status = ['status' => 0, 'message' => 'Se encontraron los siguientes errores', 'errores' => $validator->getMessageBag()->toArray()];
 		}
