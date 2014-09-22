@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder {
 				'fullname' => $faker->name,
 				'website' => $faker->url,
 				'about' => $faker->text(255),
-				'id_user' => $user->id
+				'id' => $user->id
 			]);
 		}
 	}

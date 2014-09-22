@@ -15,8 +15,7 @@ class UsersController extends BaseController {
 		return View::make('users.create');
 	}
 
-	public function postCreate()
-	{
+	public function postCreate()	{
 		$validator = Validator::make(Input::all(), User::$rules);
 
 		if ($validator->passes()) {
@@ -32,12 +31,21 @@ class UsersController extends BaseController {
 		 	$userProfile->fullname = Input::get('fullname');
 		 	$userProfile->website = Input::get('website');
 		 	$userProfile->about = Input::get('about');
-		 	$userProfile->id_user = $id_user;
+		 	$userProfile->id = $id_user;
 		 	$userProfile->save();
 		    $status = ['status' => 1, 'message' => '<img src="assets/img/addUser.png"><br /><p>Registro satisfactorio</p>'];
 		} else {
 		    $status = ['status' => 0, 'message' => 'Se encontraron los siguientes errores', 'errores' => $validator->getMessageBag()->toArray()];
 		}
 		return Response::json($status);
+	}
+
+	public function deleteDrop($id){
+		$user = User::find($id);
+		$userProfile = UserProfile::find($id);
+		$userProfile->delete();
+		$user->delete();		
+		Session::flash('message', 'Usuario eliminado satisfactoriamente');
+		return Redirect::to('users');
 	}
 }

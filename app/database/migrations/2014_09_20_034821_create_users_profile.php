@@ -17,8 +17,8 @@ class CreateUsersProfile extends Migration {
 			$table->string('fullname',100);
 			$table->string('website');
 			$table->string('about');
-			$table->integer('id_user')->unsigned();
-			$table->foreign('id_user')->references('id')->on('users');
+			$table->integer('id')->unsigned();
+			$table->foreign('id')->references('id')->on('users');
 			$table->timestamps();
 		});
 	}
