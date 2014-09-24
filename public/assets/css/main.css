@@ -31,3 +31,5 @@ body { padding-top: 70px; }
 }
 
 .invisible{display: none;}
+.avatar-user{width: 24px;height: 24px;}
+.current-button{text-align: center;}

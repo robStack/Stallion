@@ -16,7 +16,8 @@ class UsersTableSeeder extends Seeder {
 				'email' => $faker->safeEmail,
 				'password' => \Hash::make('123456'),
 				'type' => $faker->randomElement(['Leader', 'Integrant', 'Client']),
-				'enabled' => $faker->randomElement([true, false])
+				'enabled' => $faker->randomElement([true, false]),
+				'avatar' => 'assets/img/avatar.png'
 			]);
 
 			UserProfile::create([

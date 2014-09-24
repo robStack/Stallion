@@ -1,4 +1,34 @@
 $(function() {
+	$('[data-toggle="tooltip"]').tooltip();
+
+	$('.usuario').click(function(){
+		var id = $(this).attr('name'), usuario;
+		var panel = $(this).next();
+		var currentButton = $(this).children().last();
+		panel.slideToggle(400, function(){
+			if(panel.is(':visible')){
+                currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
+                $.get("users/profile/"+id, function(response) {
+                	if(response.status){
+                		usuario = response.mensaje;
+                		panel.find('.fullnameUsuario').html(usuario.userName);
+            			panel.find('.imagenPerfil').html('<img src="'+usuario.avatar+'" class="img-responsive img-circle">');
+            			panel.find('.nameUsuario').html(usuario.fullName);
+            			panel.find('.emailUsuario').html(usuario.email);
+            			panel.find('.typeUsuario').html(usuario.typeUser);
+            			panel.find('.urlUsuario').html(usuario.website);
+						panel.find('.aboutUsuario').html(usuario.about);
+                	}
+                	else
+                		perfil.html('<h3>'+response.mensaje+'</h3>');
+                });
+            }
+            else{
+                currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
+            }
+		});
+	});
+
 	$('#guardarUsuario').click(function(){
 		var user = $('#usuario').serialize();
 		$('.errores-usuario').html('');
@@ -37,32 +67,5 @@ $(function() {
 
 	$('#modalCrear').on('hidden.bs.modal', function (e) {
 		document.location.reload(true)
-	});
-
-	$('.verUsuario').click(function(){
-		var id = $(this).attr('name');
-		var perfil = $('#perfilUsuario');
-		$.ajax({
-			type: "GET",
-			url: "users/profile/"+id,
-			success: function(response){
-				var usuario = response.mensaje;
-				if(response.status){
-					$('#imagenPerfil').append('<img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle">');
-					$('#nombreUsuario').append(usuario.userName);
-					$('#fullnameUsuario').append(usuario.fullName);
-					$('#emailUsuario').append(usuario.email);
-					$('#typeUsuario').append(usuario.typeUser);
-					$('#urlUsuario').append('<a href="'+usuario.website+'" target="_blank">'+usuario.website+'</a>');
-					$('#aboutUsuario').append(usuario.about);
-				}
-				else{
-					perfil.html('<h3>'+response.mensaje+'</h3>');
-				}
-			},
-			 error: function(jq,status,message) {
-		        alert('Error al procesar la solicitud. Status: ' + status + ' - Message: ' + message);
-		    }
-		});
 	});
 });

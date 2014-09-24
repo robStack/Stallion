@@ -58,6 +58,7 @@ class UsersController extends BaseController {
 			'users.username AS userName',
 			'users.email',
 			'users.type AS typeUser',
+			'users.avatar',
 			'users_profile.fullname AS fullName',
 			'users_profile.website',
 			'users_profile.about'
