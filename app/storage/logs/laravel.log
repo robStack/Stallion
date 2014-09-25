@@ -1797,3 +1797,228 @@ Stack trace:
 Stack trace:
 #0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
 #1 {main} [] []
+[2014-09-24 05:17:53] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\stallion\bootstrap\compiled.php:5727
+Stack trace:
+#0 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5722): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5700): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\stallion\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\stallion\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\stallion\bootstrap\compiled.php(7763): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\stallion\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#12 C:\xampp\htdocs\stallion\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
+[2014-09-24 05:19:32] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\stallion\bootstrap\compiled.php:5727
+Stack trace:
+#0 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5722): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5700): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\stallion\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\stallion\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\stallion\bootstrap\compiled.php(7763): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\stallion\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#12 C:\xampp\htdocs\stallion\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
+[2014-09-24 19:05:54] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function delete() on a non-object' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:46
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-24 19:08:30] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\stallion\bootstrap\compiled.php:5727
+Stack trace:
+#0 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5722): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5700): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\stallion\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\stallion\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\stallion\bootstrap\compiled.php(7763): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\stallion\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#12 C:\xampp\htdocs\stallion\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
+[2014-09-24 19:10:23] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\stallion\bootstrap\compiled.php:5727
+Stack trace:
+#0 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5722): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5700): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\stallion\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\stallion\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\stallion\bootstrap\compiled.php(7763): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\stallion\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#12 C:\xampp\htdocs\stallion\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
+[2014-09-24 19:48:11] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '=', expecting ']'' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:48
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-24 19:49:19] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '=', expecting ']'' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:48
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-24 19:50:09] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '=', expecting ']'' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:48
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-24 19:50:33] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '=', expecting ']'' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:48
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-24 20:06:26] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function delete() on a non-object' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:46
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-24 21:09:38] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function delete() on a non-object' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:46
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-24 23:53:45] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' with message 'Controller method not found.' in C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Controller.php:254
+Stack trace:
+#0 [internal function]: Illuminate\Routing\Controller->missingMethod(Array)
+#1 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5799): Illuminate\Routing\Controller->callAction('missingMethod', Array)
+#3 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5787): Illuminate\Routing\ControllerDispatcher->call(Object(UsersController), Object(Illuminate\Routing\Route), 'missingMethod')
+#4 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4986): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'UsersController', 'missingMethod')
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Array)
+#6 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5345): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5011): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#8 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\stallion\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\stallion\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#12 C:\xampp\htdocs\stallion\bootstrap\compiled.php(7763): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#13 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#15 C:\xampp\htdocs\stallion\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#16 C:\xampp\htdocs\stallion\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2014-09-24 23:54:25] production.ERROR: exception 'ErrorException' with message 'Missing argument 1 for UsersController::putUpdate()' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:79
+Stack trace:
+#0 C:\xampp\htdocs\stallion\app\controllers\UsersController.php(79): Illuminate\Exception\Handler->handleError(2, 'Missing argumen...', 'C:\\xampp\\htdocs...', 79, Array)
+#1 [internal function]: UsersController->putUpdate()
+#2 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5799): Illuminate\Routing\Controller->callAction('putUpdate', Array)
+#4 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5787): Illuminate\Routing\ControllerDispatcher->call(Object(UsersController), Object(Illuminate\Routing\Route), 'putUpdate')
+#5 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4986): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'UsersController', 'putUpdate')
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#7 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5345): call_user_func_array(Object(Closure), Array)
+#8 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5011): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\stallion\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\stallion\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 C:\xampp\htdocs\stallion\bootstrap\compiled.php(7763): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#15 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#16 C:\xampp\htdocs\stallion\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#17 C:\xampp\htdocs\stallion\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-09-24 23:55:20] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Reponse' not found' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:86
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-25 00:00:22] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Reponse' not found' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:86
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-25 00:11:36] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Reponse' not found' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:86
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-25 00:36:49] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Reponse' not found' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:86
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-25 00:40:00] production.ERROR: exception 'ErrorException' with message 'Undefined variable: status' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:86
+Stack trace:
+#0 C:\xampp\htdocs\stallion\app\controllers\UsersController.php(86): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 [internal function]: UsersController->putUpdate('18')
+#2 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5799): Illuminate\Routing\Controller->callAction('putUpdate', Array)
+#4 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5787): Illuminate\Routing\ControllerDispatcher->call(Object(UsersController), Object(Illuminate\Routing\Route), 'putUpdate')
+#5 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4986): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'UsersController', 'putUpdate')
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('18')
+#7 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5345): call_user_func_array(Object(Closure), Array)
+#8 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5011): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\stallion\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\stallion\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 C:\xampp\htdocs\stallion\bootstrap\compiled.php(7763): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#15 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#16 C:\xampp\htdocs\stallion\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#17 C:\xampp\htdocs\stallion\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-09-25 00:40:53] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'return' (T_RETURN)' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:88
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-25 00:41:23] production.ERROR: exception 'ErrorException' with message 'Undefined variable: input' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:87
+Stack trace:
+#0 C:\xampp\htdocs\stallion\app\controllers\UsersController.php(87): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 87, Array)
+#1 [internal function]: UsersController->putUpdate('15')
+#2 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5799): Illuminate\Routing\Controller->callAction('putUpdate', Array)
+#4 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5787): Illuminate\Routing\ControllerDispatcher->call(Object(UsersController), Object(Illuminate\Routing\Route), 'putUpdate')
+#5 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4986): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'UsersController', 'putUpdate')
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('15')
+#7 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5345): call_user_func_array(Object(Closure), Array)
+#8 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5011): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\stallion\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\stallion\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 C:\xampp\htdocs\stallion\bootstrap\compiled.php(7763): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#15 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#16 C:\xampp\htdocs\stallion\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#17 C:\xampp\htdocs\stallion\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-09-25 04:14:42] production.ERROR: exception 'ErrorException' with message 'Undefined variable: userProfile' in C:\xampp\htdocs\stallion\app\controllers\UsersController.php:88
+Stack trace:
+#0 C:\xampp\htdocs\stallion\app\controllers\UsersController.php(88): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 88, Array)
+#1 [internal function]: UsersController->putUpdate('15')
+#2 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5799): Illuminate\Routing\Controller->callAction('putUpdate', Array)
+#4 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5787): Illuminate\Routing\ControllerDispatcher->call(Object(UsersController), Object(Illuminate\Routing\Route), 'putUpdate')
+#5 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4986): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'UsersController', 'putUpdate')
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('15')
+#7 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5345): call_user_func_array(Object(Closure), Array)
+#8 C:\xampp\htdocs\stallion\bootstrap\compiled.php(5011): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\stallion\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\stallion\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\stallion\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 C:\xampp\htdocs\stallion\bootstrap\compiled.php(7763): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#15 C:\xampp\htdocs\stallion\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#16 C:\xampp\htdocs\stallion\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#17 C:\xampp\htdocs\stallion\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []

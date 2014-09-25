@@ -9,9 +9,7 @@
 @stop
 
 @section('read')
-	@if (Session::has('message'))
-		<div class="alert alert-info">{{ Session::get('message') }}</div>
-	@endif
+	<div id="mensajesUsuario"></div>
 
 	<table class="table table-hover">
 		<thead>
@@ -67,7 +65,7 @@
 		                                    </tr>
 		                                    <tr>
 		                                    	<td>Bio</td>
-		                                    	<td class="aboutUsuario">d</td>
+		                                    	<td class="aboutUsuario"></td>
 		                                    </tr>
 		                            	</tbody>
 		                            </table>
@@ -77,8 +75,8 @@
 	                    <div class="panel-footer">
 	                        <button class="btn btn-sm btn-primary" type="button" data-toggle="tooltip" data-original-title="Send message to user"><i class="glyphicon glyphicon-envelope"></i></button>
 	                        <span class="pull-right">
-	                            <button class="btn btn-sm btn-warning" type="button" data-toggle="tooltip" data-original-title="Edit this user"><i class="glyphicon glyphicon-edit"></i></button>
-	                            <button class="btn btn-sm btn-danger" type="button" data-toggle="tooltip" data-original-title="Remove this user"><i class="glyphicon glyphicon-remove"></i></button>
+                            <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#modalEditar" rel="tooltip" data-original-title="Editar usuario" data-id="{{ $user->id }}"><i class="glyphicon glyphicon-edit"></i></button>
+                            <button class="btn btn-sm btn-danger" type="button" data-toggle="modal" data-target="#modalEliminar" rel="tooltip" data-original-title="Elminar usuario" data-id="{{ $user->id }}"><i class="glyphicon glyphicon-remove"></i></button>
 	                        </span>
 	                    </div>
 	                </div>
@@ -96,22 +94,44 @@
 					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
 					<h4 class="modal-title" id="myModalLabel">Crear usuario</h4>
 				</div>
-				<div class="modal-body">
-					<div id="f1_container">
-						<div id="f1_card" class="shadow">
-							<div id="frontface" class="front face">
-								@include('users.create')
-							</div>
-							<div id="backface" class="back face center invisible">
-								
-							</div>
-						</div>
-					</div>	
-				    
+				<div class="modal-body">					
+					@include('users.create')		
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 					<button id="guardarUsuario" type="button" class="btn btn-primary">Guardar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+					<h4 class="modal-title" id="myModalLabel">Eliminar usuario</h4>
+				</div>
+				<div class="modal-body">
+					<button id="eliminarUsuario" type="button" class="btn btn-danger btn-lg">Confirmar eliminar usuario</button>		    
+				</div>				
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+					<h4 class="modal-title" id="myModalLabel">Editar usuario</h4>
+				</div>
+				<div class="modal-body">					
+					@include('users.update')		
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+					<button id="actualizarUsuario" type="button" class="btn btn-primary">Guardar</button>
 				</div>
 			</div>
 		</div>
