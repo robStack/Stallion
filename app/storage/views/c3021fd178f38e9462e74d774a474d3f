@@ -1,4 +1,4 @@
-<?php echo Form::open(array('id' => 'updateUsuario', 'url' => 'users/update', 'method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form')); ?>
+<?php echo Form::open(array('id' => 'updateUsuario', 'url' => 'users/update', 'class' => 'form-horizontal', 'role' => 'form')); ?>
 
 	<?php echo HTML::ul($errors->all()); ?>
 
@@ -10,7 +10,7 @@
 		<?php echo Form::label('username', 'Usuario', ['class' => 'col-sm-4 control-label']); ?>
 
 		<div class="col-sm-6">
-			<?php echo Form::text('username', Input::old('username'), array('class' => 'form-control')); ?>
+			<?php echo Form::text('username', Input::old('username'), array('class' => 'form-control', 'disabled')); ?>
 
 			<div class="errores-usuario"></div>
 		</div>
@@ -30,7 +30,7 @@
 		<?php echo Form::label('email', 'Correo electrónico', ['class' => 'col-sm-4 control-label']); ?>
 
 		<div class="col-sm-6">
-			<?php echo Form::text('email', Input::old('email'), array('class' => 'form-control')); ?>
+			<?php echo Form::text('email', Input::old('email'), array('class' => 'form-control', 'disabled')); ?>
 
 			<div class="errores-usuario"></div>
 		</div>

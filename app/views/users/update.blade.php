@@ -1,4 +1,4 @@
-{{ Form::open(array('id' => 'updateUsuario', 'url' => 'users/update', 'method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form')) }}
+{{ Form::open(array('id' => 'updateUsuario', 'url' => 'users/update', 'class' => 'form-horizontal', 'role' => 'form')) }}
 	{{ HTML::ul($errors->all()) }}
 
 	{{ Form::text('id_user', Input::old('id_user'), array('id' => 'id_user', 'class' => 'form-control invisible')) }}
@@ -6,7 +6,7 @@
 	<div class="form-group">
 		{{ Form::label('username', 'Usuario', ['class' => 'col-sm-4 control-label']) }}
 		<div class="col-sm-6">
-			{{ Form::text('username', Input::old('username'), array('class' => 'form-control')) }}
+			{{ Form::text('username', Input::old('username'), array('class' => 'form-control', 'disabled')) }}
 			<div class="errores-usuario"></div>
 		</div>
 	</div>
@@ -22,7 +22,7 @@
 	<div class="form-group">
 		{{ Form::label('email', 'Correo electrónico', ['class' => 'col-sm-4 control-label']) }}
 		<div class="col-sm-6">
-			{{ Form::text('email', Input::old('email'), array('class' => 'form-control')) }}
+			{{ Form::text('email', Input::old('email'), array('class' => 'form-control', 'disabled')) }}
 			<div class="errores-usuario"></div>
 		</div>
 	</div>

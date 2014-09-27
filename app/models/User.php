@@ -24,6 +24,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		'password'=>'required|alpha_num|between:6,12|confirmed',
 		'password_confirmation'=>'required|alpha_num|between:6,12'
 	);
+
+	public static $rulesUpdate = array(
+		'fullname'=>'required|min:10',
+		'about' => 'required|min:10',
+		'password'=>'required|alpha_num|between:6,12|confirmed',
+		'password_confirmation'=>'required|alpha_num|between:6,12'
+	);
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *

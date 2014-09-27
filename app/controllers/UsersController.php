@@ -11,6 +11,11 @@ class UsersController extends BaseController {
 		return View::make('users.dashboard')->with('users', $users);
 	}
 
+	public function getUsers(){
+		$users = User::all();
+		return View::make('users.read')->with('users', $users);
+	}
+
 	public function getCreate(){
 		return View::make('users.create');
 	}
@@ -75,7 +80,7 @@ class UsersController extends BaseController {
 	public function putUpdate($id)
 	{
 		$user = User::find($id);
-		$validator = Validator::make(Input::all(), User::$rules);
+		$validator = Validator::make(Input::all(), User::$rulesUpdate);
 		if($validator->passes()){
 			$user->type = 'Integrant';
 			$user->save();
@@ -84,10 +89,10 @@ class UsersController extends BaseController {
 			$userProfile->website = Input::get('website');
 			$userProfile->about = Input::get('about');
 			$userProfile->save();
-			$status = ['status' => 1, 'message' => $userProfile];
+			$status = ['status' => 1, 'message' => '<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> Se ha actualizado el usuario satisfactoriamente</div>'];
 		}		
 		else{
-			$status = ['status' => 0, 'message' => $validator->getMessageBag()->toArray()];
+			$status = ['status' => 0, 'message' => 'Se encontraron los siguientes errores', 'errores' => $validator->getMessageBag()->toArray()];
 		}
 		return Response::json($status);
 	}

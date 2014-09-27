@@ -1,14 +1,31 @@
 $(function() {
 	$('[rel="tooltip"]').tooltip();
 
-	$('.usuario').click(function(){
+	function read(){
+		$.ajax({
+			type: "GET",
+			url: "users/users",
+			success: function(response){
+				$('#tabla-usuarios').html(response);
+			},
+			error: function(jq,status,message) {
+		        console.log('Error al procesar la solicitud. Status: ' + status + ' - Message: ' + message);
+		    }
+		});
+	}
+
+	read();
+
+	$('body').on('click','.usuario', function(){		
 		var id = $(this).attr('name'), usuario;
 		var panel = $(this).next();
-		var currentButton = $(this).children().last();		
+		var currentButton = $(this).children().last();	
 		panel.slideToggle(400, function(){
 			if(panel.is(':visible')){
                 currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
                 $.get("users/profile/"+id, function(response) {
+                	panel.add('.loader').removeClass('invisible');
+					panel.add('.panel').addClass('invisible');	
                 	if(response.status){
                 		usuario = response.mensaje;
                 		panel.find('.fullnameUsuario').html(usuario.userName);
@@ -41,18 +58,12 @@ $(function() {
 				if(response.status){
 					$('#mensajesUsuario').html(response.message);
 					$('#modalCrear').modal('toggle');
+					read();
 				}
 				else{
 					var mensajes = response.errores;
 					$.each(mensajes, function(i, val) {
-						var list = '';
-						var colSm = $('#'+i).parent();
-						var formGroup = colSm.parent().addClass('has-error');
-						$(colSm).append('<span class="glyphicon glyphicon-remove form-control-feedback"></span>');
-						$.each(val, function(index, value){
-							list += '<li class="error">'+value+'</li>';
-						});
-						$(colSm).find('.errores-usuario').html(list);
+						$('#usuario').find("input[name='"+i+"']").next().html('<div class="error">* '+val+'</div>');
 					});
 				}
 			},
@@ -60,10 +71,6 @@ $(function() {
 		        alert('Error al procesar la solicitud. Status: ' + status + ' - Message: ' + message);
 		    }
 		});
-	});
-
-	$('#modalCrear').on('hidden.bs.modal', function (e) {
-		//document.location.reload(true);
 	});
 
 	$('#modalEliminar').on('show.bs.modal', function(e) {
@@ -79,13 +86,13 @@ $(function() {
 		    success: function(response) {
 		        $('#mensajesUsuario').html(response.message);
 		        $('#modalEliminar').modal('toggle');
+		        read();
 		    }
 		});
 	});
 
 	$('#modalEditar').on('show.bs.modal', function(e) {
 		var id = $(e.relatedTarget).data('id');
-		console.log(id);
 		$.get("users/profile/"+id, function(response) {
 			var panel = $('#modalEditar');
 			if(response.status){
@@ -103,15 +110,24 @@ $(function() {
 	});	
 
 	$('#actualizarUsuario').click(function(){
-		var user = $('updateUsuario').serialize();
+		var user = $('#updateUsuario').serialize();
 		var id = $('#id_user').val();
-		console.log(id);
 		$.ajax({
 			type: "PUT",
 			url: "users/update/"+id,
 			data: user,
 			success: function(response){
-				console.log(response);
+				if(response.status){
+					$('#mensajesUsuario').html(response.message);
+					$('#modalActualizar').modal('toggle');
+					read();
+				}
+				else{
+					var mensajes = response.errores;
+					$.each(mensajes, function(i, val) {
+						$('#updateUsuario').find("input[name='"+i+"']").next().html('<div class="error">* '+val+'</div>');
+					});
+				}
 			},
 			error: function(jq,status,message) {
 		        alert('Error al procesar la solicitud. Status: ' + status + ' - Message: ' + message);
