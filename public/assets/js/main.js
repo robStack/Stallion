@@ -24,8 +24,8 @@ $(function() {
 			if(panel.is(':visible')){
                 currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
                 $.get("users/profile/"+id, function(response) {
-                	panel.add('.loader').removeClass('invisible');
-					panel.add('.panel').addClass('invisible');	
+                	panel.add('.loader').addClass('invisible');
+					panel.add('.panel').removeClass('invisible');	
                 	if(response.status){
                 		usuario = response.mensaje;
                 		panel.find('.fullnameUsuario').html(usuario.userName);
