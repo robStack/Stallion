@@ -16,19 +16,27 @@
 		<div class="row">
 	        <div class="col-sm-1"></div>
 	        <div class="col-sm-10">
-				<?php echo Form::open(array('url'=>'users/signin', 'class'=>'form-signin')); ?>
+				<div class="container">
+				    <?php if(Session::has('message')): ?>
+				        <p class="alert"><?php echo Session::get('message'); ?></p>
+				    <?php endif; ?>
+				</div>
+				<div>
+					<?php echo Form::open(array('url'=>'users/signin', 'class'=>'form-signin')); ?>
 
-				    <h2 class="form-signin-heading">Please Login</h2>
-				 
-				    <?php echo Form::text('email', null, array('class'=>'input-block-level', 'placeholder'=>'Email Address')); ?>
+					    <h2 class="form-signin-heading">Please Login</h2>
+					 	<br />
+					    <?php echo Form::text('username', null, array('class'=>'form-control', 'placeholder'=>'User Name')); ?>
 
-				    <?php echo Form::password('password', array('class'=>'input-block-level', 'placeholder'=>'Password')); ?>
+					    <br />
+					    <?php echo Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')); ?>
 
-				 
-				    <?php echo Form::submit('Login', array('class'=>'btn btn-large btn-primary btn-block')); ?>
+					 	<br />
+					    <?php echo Form::submit('Login', array('class'=>'btn btn-large btn-primary btn-block')); ?>
 
-				<?php echo Form::close(); ?>
+					<?php echo Form::close(); ?>
 
+				</div>
 	        </div>
 	        <div class="col-sm-1"></div>
 	    </div>

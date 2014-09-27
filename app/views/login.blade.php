@@ -16,14 +16,22 @@
 		<div class="row">
 	        <div class="col-sm-1"></div>
 	        <div class="col-sm-10">
-				{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin')) }}
-				    <h2 class="form-signin-heading">Please Login</h2>
-				 
-				    {{ Form::text('email', null, array('class'=>'input-block-level', 'placeholder'=>'Email Address')) }}
-				    {{ Form::password('password', array('class'=>'input-block-level', 'placeholder'=>'Password')) }}
-				 
-				    {{ Form::submit('Login', array('class'=>'btn btn-large btn-primary btn-block'))}}
-				{{ Form::close() }}
+				<div class="container">
+				    @if(Session::has('message'))
+				        <p class="alert">{{ Session::get('message') }}</p>
+				    @endif
+				</div>
+				<div>
+					{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin')) }}
+					    <h2 class="form-signin-heading">Please Login</h2>
+					 	<br />
+					    {{ Form::text('username', null, array('class'=>'form-control', 'placeholder'=>'User Name')) }}
+					    <br />
+					    {{ Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')) }}
+					 	<br />
+					    {{ Form::submit('Login', array('class'=>'btn btn-large btn-primary btn-block'))}}
+					{{ Form::close() }}
+				</div>
 	        </div>
 	        <div class="col-sm-1"></div>
 	    </div>

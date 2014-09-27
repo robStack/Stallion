@@ -4,7 +4,7 @@ class UsersController extends BaseController {
 
 	public function __construct() {
 	    $this->beforeFilter('csrf', array('on'=>'post'));
-	    $this->beforeFilter('auth', array('only'=>array('getDashboard')));
+	    $this->beforeFilter('auth', array('only'=>array('getIndex')));
 	}
 
 	public function getIndex(){
@@ -84,6 +84,7 @@ class UsersController extends BaseController {
 		$validator = Validator::make(Input::all(), User::$rulesUpdate);
 		if($validator->passes()){
 			$user->type = 'Integrant';
+			$user->password = Hash::make(Input::get('password'));
 			$user->save();
 			$userProfile = UserProfile::find($id);
 			$userProfile->fullname = Input::get('fullname');

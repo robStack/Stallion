@@ -35,22 +35,13 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-    if (Auth::guest()) return Redirect::guest('users/login');
+    if (Auth::guest()) return Redirect::guest('login');
 });
-/*
-|--------------------------------------------------------------------------
-| Guest Filter
-|--------------------------------------------------------------------------
-|
-| The "guest" filter is the counterpart of the authentication filters as
-| it simply checks that the current user is not logged in. A redirect
-| response will be issued if they are, which you may freely change.
-|
-*/
 
-Route::filter('guest', function()
+
+Route::filter('auth.basic', function()
 {
-	if (Auth::check()) return Redirect::to('/');
+	return Auth::basic();
 });
 
 /*
