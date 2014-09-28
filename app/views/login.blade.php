@@ -22,15 +22,24 @@
 				    @endif
 				</div>
 				<div>
-					{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin')) }}
-					    <h2 class="form-signin-heading">Please Login</h2>
-					 	<br />
-					    {{ Form::text('username', null, array('class'=>'form-control', 'placeholder'=>'User Name')) }}
-					    <br />
-					    {{ Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')) }}
-					 	<br />
-					    {{ Form::submit('Login', array('class'=>'btn btn-large btn-primary btn-block'))}}
-					{{ Form::close() }}
+					<div class="container">
+					    <div class="row">
+					        <div class="col-xs-1 col-sm-4"></div>
+					        <div class="col-xs-10 col-sm-4">
+					        	{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin')) }}
+								    <h2 class="form-signin-heading">Iniciar Sesión</h2>
+								 	<br />
+								    {{ Form::text('username', null, array('class'=>'form-control', 'placeholder'=>'User Name')) }}
+								    <br />
+								    {{ Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')) }}
+								 	<br />
+								    {{ Form::submit('Login', array('class'=>'btn btn-large btn-primary btn-block'))}}
+								{{ Form::close() }}
+					        </div>
+					        <div class="col-xs-1 col-sm-4"></div>
+					    </div>
+					</div>
+					
 				</div>
 	        </div>
 	        <div class="col-sm-1"></div>
