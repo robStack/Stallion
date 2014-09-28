@@ -22,20 +22,29 @@
 				    <?php endif; ?>
 				</div>
 				<div>
-					<?php echo Form::open(array('url'=>'users/signin', 'class'=>'form-signin')); ?>
+					<div class="container">
+					    <div class="row">
+					        <div class="col-xs-1 col-sm-4"></div>
+					        <div class="col-xs-10 col-sm-4">
+					        	<?php echo Form::open(array('url'=>'users/signin', 'class'=>'form-signin')); ?>
 
-					    <h2 class="form-signin-heading">Please Login</h2>
-					 	<br />
-					    <?php echo Form::text('username', null, array('class'=>'form-control', 'placeholder'=>'User Name')); ?>
+								    <h2 class="form-signin-heading">Iniciar Sesión</h2>
+								 	<br />
+								    <?php echo Form::text('username', null, array('class'=>'form-control', 'placeholder'=>'User Name')); ?>
 
-					    <br />
-					    <?php echo Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')); ?>
+								    <br />
+								    <?php echo Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')); ?>
 
-					 	<br />
-					    <?php echo Form::submit('Login', array('class'=>'btn btn-large btn-primary btn-block')); ?>
+								 	<br />
+								    <?php echo Form::submit('Login', array('class'=>'btn btn-large btn-primary btn-block')); ?>
 
-					<?php echo Form::close(); ?>
+								<?php echo Form::close(); ?>
 
+					        </div>
+					        <div class="col-xs-1 col-sm-4"></div>
+					    </div>
+					</div>
+					
 				</div>
 	        </div>
 	        <div class="col-sm-1"></div>

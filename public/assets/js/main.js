@@ -16,7 +16,7 @@ $(function() {
 
 	read();
 
-	$('body').on('click','.usuario', function(){		
+	$('body').on('click','.usuario', function(){				
 		var id = $(this).attr('name'), usuario;
 		var panel = $(this).next();
 		var currentButton = $(this).children().last();	
@@ -24,9 +24,7 @@ $(function() {
 			if(panel.is(':visible')){
                 currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
                 $.get("users/profile/"+id, function(response) {
-                	panel.add('.loader').addClass('invisible');
-					panel.add('.panel').removeClass('invisible');	
-                	if(response.status){
+                	if(response.status){                		
                 		usuario = response.mensaje;
                 		panel.find('.fullnameUsuario').html(usuario.userName);
             			panel.find('.imagenPerfil').html('<img src="'+usuario.avatar+'" class="img-responsive img-circle">');
@@ -35,6 +33,8 @@ $(function() {
             			panel.find('.typeUsuario').html(usuario.typeUser);
             			panel.find('.urlUsuario').html(usuario.website);
 						panel.find('.aboutUsuario').html(usuario.about);
+						panel.find('.loader').addClass('invisible');
+						panel.find('.panel').removeClass('invisible');
                 	}
                 	else
                 		perfil.html('<h3>'+response.mensaje+'</h3>');
@@ -42,6 +42,8 @@ $(function() {
             }
             else{
                 currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
+                panel.add('.loader').removeClass('invisible');    
+                panel.find('.panel').addClass('invisible');            	
             }
 		});
 	});
