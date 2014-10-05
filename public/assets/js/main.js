@@ -1,6 +1,13 @@
 $(function() {
 	$('[rel="tooltip"]').tooltip();
 
+	$('#tabContent a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+		var content = $(this).attr('data-content');
+		console.log(content);
+	});
+
 	function read(){
 		$.ajax({
 			type: "GET",

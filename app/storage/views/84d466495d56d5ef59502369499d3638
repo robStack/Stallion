@@ -1,0 +1,10 @@
+<div class="row sidebar-element">
+    <div class="col-sm-4 avatar">
+    	<img src="<?php echo $profile->avatar; ?>" class="img-circle img-responsive" alt="Avatar de <?php echo $profile->fullName; ?>">
+    </div>
+    <div class="col-sm-8">
+    	<h3><?php echo $profile->fullName; ?></h3>
+		<p><?php echo $profile->userName; ?></p>
+    </div>
+</div>
+<div class="separator"></div>

@@ -7,8 +7,9 @@ class DashboardController extends \BaseController {
 	public function getIndex(){
 		$id = Auth::id();
 		$profile = $this->profileUser($id);
-		$this->layout->sidebar = View::make('dashboard.sidebar')->with('profile', $profile);
+		$this->layout->sidebarLeft = View::make('dashboard.sidebarLeft')->with('profile', $profile);
 		$this->layout->content = View::make('dashboard.content');
+		$this->layout->sidebarRight = View::make('dashboard.sidebarLeft')->with('profile', $profile);
 	}
 
 	public static function profileUser($id){
@@ -43,7 +44,7 @@ class DashboardController extends \BaseController {
 	}
 
 	public function getDashboard(){
-		$this->layout->sidebar = View::make('dashboard.sidebar');
+		$this->layout->sidebarLeft = View::make('dashboard.sidebarLeft');
 		$this->layout->content = View::make('dashboard.content');
 	}
 

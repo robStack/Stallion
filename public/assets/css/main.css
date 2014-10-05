@@ -1,4 +1,5 @@
-body { padding-top: 70px; }
+html,body{height:100%;}
+body { padding-top: 70px; background: #F7F7FA}
 .error{list-style: none;font-size: 12px;color:#a94442;}
 #f1_container{position: relative;z-index: 1;}
 #f1_container{perspective: 1000;}
@@ -10,5 +11,6 @@ body { padding-top: 70px; }
 .avatar-user{width: 24px;height: 24px;}
 .current-button{text-align: center;}
 .loader{text-align: center;}
-.profile-content{float: right;}
-.avatar{text-align: center;}
+.content{border: 2px #F7F7F7 solid;}
+.sidebar-right{background: #F7F7FA;}
+
