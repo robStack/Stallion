@@ -21,10 +21,10 @@
 	        <div class="col-sm-10">
 	        	<div class="row">
 			        <div class="col-sm-3 col-md-4">
-			        	@yield('tasks')
+			        	{{ $sidebar }}
 			        </div>
 			        <div class="col-sm-9 col-md-8">
-			        	@yield('read')
+			        	{{ $content }}
 			        </div>
 			        <div class="col-xs-12">
 			        	@include('layout.footer')

@@ -98,27 +98,4 @@ class UsersController extends BaseController {
 		}
 		return Response::json($status);
 	}
-
-	public function getLogin(){
-		return View::make('login');
-	}
-
-	public function postSignin(){
-		if (Auth::attempt(array('username'=>Input::get('username'), 'password'=>Input::get('password')))) {
-		    return Redirect::to('users/')->with('message', 'You are now logged in!');
-		} else {
-		    return Redirect::to('users/login')
-		        ->with('message', 'Your username/password combination was incorrect')
-		        ->withInput();
-		}
-	}
-
-	public function getDashboard(){
-		return View::make('users.dashboard');
-	}
-
-	public function getLogout(){
-		Auth::logout();
-    	return Redirect::to('login')->with('message', 'Your are now logged out!');
-	}
 }

@@ -10,3 +10,5 @@ body { padding-top: 70px; }
 .avatar-user{width: 24px;height: 24px;}
 .current-button{text-align: center;}
 .loader{text-align: center;}
+.profile-content{float: right;}
+.avatar{text-align: center;}

@@ -12,5 +12,6 @@
 */
 Route::get('/', function(){	return View::make('login'); });
 Route::get('login', function(){ return View::make('login'); });
-Route::controller('api/v1','ApiController');
-Route::controller('users','UsersController');
+Route::controller('api/v1', 'ApiController');
+Route::controller('users', 'UsersController');
+Route::controller('dashboard', 'DashboardController');

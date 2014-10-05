@@ -26,7 +26,7 @@
 					    <div class="row">
 					        <div class="col-xs-1 col-sm-4"></div>
 					        <div class="col-xs-10 col-sm-4">
-					        	{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin')) }}
+					        	{{ Form::open(array('url'=>'dashboard/signin', 'class'=>'form-signin')) }}
 								    <h2 class="form-signin-heading">Iniciar Sesión</h2>
 								 	<br />
 								    {{ Form::text('username', null, array('class'=>'form-control', 'placeholder'=>'User Name')) }}
