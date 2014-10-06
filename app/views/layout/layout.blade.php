@@ -16,22 +16,20 @@
 		<div class="container">
 			@include('layout.navbar')
 		</div>
-		<div class="row">
+		<div class="row fill main-row">
 	        <div class="col-sm-1"></div>
-	        <div class="col-sm-10">
-	        	<div class="panel">
-				    <div class="row">
-				        <div class="col-sm-2 col-md-3 col-lg-3 sidebar-left">
-				        	{{ $sidebarLeft }}
-				        </div>
-				        <div class="col-sm-8 col-md-6 col-lg-6 content">
-				        	{{ $content }}
-				        </div>
-				        <div class="col-sm-2 col-md-3 col-lg-3 sidebar-right">
-				        	{{ $sidebarRight }}
-				        </div>
-				    </div>
-				</div>
+	        <div class="col-sm-10 fill">
+			    <div class="row panel main">
+			        <div class="col-sm-2 col-md-3 col-lg-3 sidebar sidebar-left">
+			        	{{ $sidebarLeft }}
+			        </div>
+			        <div class="col-sm-8 col-md-6 col-lg-6 content">
+			        	{{ $content }}
+			        </div>
+			        <div class="col-sm-2 col-md-3 col-lg-3 sidebar sidebar-right">
+			        	{{ $sidebarRight }}
+			        </div>
+			    </div>
 	        </div>
 	        <div class="col-sm-1"></div>
 	    </div>

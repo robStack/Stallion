@@ -1,5 +1,4 @@
-html,body{height:100%;}
-body { padding-top: 70px; background: #F7F7FA}
+html,body{height:100%;padding-top: 50px; background: #F7F7FA;}
 .error{list-style: none;font-size: 12px;color:#a94442;}
 #f1_container{position: relative;z-index: 1;}
 #f1_container{perspective: 1000;}
@@ -11,6 +10,20 @@ body { padding-top: 70px; background: #F7F7FA}
 .avatar-user{width: 24px;height: 24px;}
 .current-button{text-align: center;}
 .loader{text-align: center;}
-.content{border: 2px #F7F7F7 solid;}
+.content{border: 2px #F7F7F7 solid;height: 100%;}
+.content .tab-content{height: 90%;overflow-y: scroll;}
+.sidebar{padding-top: 10px;height: 100%;min-height: 100%;}
 .sidebar-right{background: #F7F7FA;}
-
+.main{-webkit-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.7);-moz-box-shadow:0px 0px 4px 0px rgba(50, 50, 50, 0.7);box-shadow:0px 0px 4px 0px rgba(50, 50, 50, 0.7);height: 100%;min-height: 100%;}
+.fill{height: 100%;min-height: 100%;}
+#tabContent{background: #EEEEEE;}
+.main-row{margin-left: 0 !important;margin-right: 0 !important;}
+.sidebar-left .sidebar-element {padding: 10px 0 10px 0;border-bottom: 1px #EEEEEE solid;}
+.sidebar-left .sidebar-element img {vertical-align: middle;}
+.sidebar-left .sidebar-element a {text-decoration: none; color:#333333;}
+.panel-default{border-color: #FFF !important;}
+.panel-group .panel+.panel{margin-top: 0 !important;}
+.menu-icono {float: right;}
+.sidebar-right .sidebar-element {height: 30%;}
+.chat { bottom: 0;position: absolute;width: 100%;}
+.chat .panel-heading img {width: 20px;height: 20px;float: right;}

@@ -9,7 +9,7 @@ class DashboardController extends \BaseController {
 		$profile = $this->profileUser($id);
 		$this->layout->sidebarLeft = View::make('dashboard.sidebarLeft')->with('profile', $profile);
 		$this->layout->content = View::make('dashboard.content');
-		$this->layout->sidebarRight = View::make('dashboard.sidebarLeft')->with('profile', $profile);
+		$this->layout->sidebarRight = View::make('dashboard.sidebarRight');
 	}
 
 	public static function profileUser($id){
