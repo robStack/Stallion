@@ -24,6 +24,7 @@ html,body{height:100%;padding-top: 50px; background: #F7F7FA;}
 .panel-default{border-color: #FFF !important;}
 .panel-group .panel+.panel{margin-top: 0 !important;}
 .menu-icono {float: right;}
-.sidebar-right .sidebar-element {height: 30%;}
+.sidebar-right .sidebar-element {height: 30%;position: relative;border: 1px #EEEEEE solid;}
+.sidebar-right .sidebar-element .panel-footer{position: absolute;width: 100%;bottom: 0;}
 .chat { bottom: 0;position: absolute;width: 100%;}
 .chat .panel-heading img {width: 20px;height: 20px;float: right;}
