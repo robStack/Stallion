@@ -75,7 +75,7 @@
 			<h3 class="panel-title">{{ $profile->fullName }} / {{ $profile->userName }} <img src="{{ $profile->avatar }}" class="img-circle img-responsive" alt="Avatar de {{ $profile->fullName }}"></h3>
 		</div>
 		<div class="panel-body">
-			Panel content
+			<iframe src="http://192.168.1.70:3000"></iframe>
 		</div>
 		<div class="panel-footer">
 			<a href="#" class="settings-chat btn btn-default"><span class="glyphicon glyphicon-cog"></span></a>

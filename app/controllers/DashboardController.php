@@ -4,6 +4,11 @@ class DashboardController extends \BaseController {
 
 	protected $layout = 'layout.layout';
 
+	public function __construct() {
+	    $this->beforeFilter('csrf', array('on'=>'post'));
+	    $this->beforeFilter('auth', array('only'=>array('getIndex')));
+	}
+
 	public function getIndex(){
 		$id = Auth::id();
 		$profile = $this->profileUser($id);
