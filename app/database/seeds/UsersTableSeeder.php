@@ -9,6 +9,22 @@ class UsersTableSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 
+		$user = User::create([
+			'username' => 'admin',
+			'email' => 'megas.roberto@gmail.com',
+			'password' => \Hash::make('123456'),
+			'type' => 'Admin',
+			'enabled' => true,
+			'avatar' => 'assets/img/avatar.png'
+		]);
+
+		UserProfile::create([
+			'fullname' => 'Admin',
+			'website' => '',
+			'about' => '',
+			'id' => $user->id
+		]);
+
 		foreach(range(1, 20) as $index)
 		{
 			$user = User::create([

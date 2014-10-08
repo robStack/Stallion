@@ -3823,3 +3823,103 @@ Stack trace:
 #22 C:\xampp\htdocs\stallion\vendor\symfony\console\Symfony\Component\Console\Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #23 C:\xampp\htdocs\stallion\artisan(59): Symfony\Component\Console\Application->run()
 #24 {main} [] []
+[2014-10-08 02:06:53] production.ERROR: exception 'InvalidArgumentException' with message 'View [api.index] not found.' in C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:146
+Stack trace:
+#0 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(83): Illuminate\View\FileViewFinder->findInPaths('api.index', Array)
+#1 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\View\Factory.php(124): Illuminate\View\FileViewFinder->find('api.index')
+#2 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(208): Illuminate\View\Factory->make('api.index')
+#3 C:\xampp\htdocs\stallion\app\controllers\ApiController.php(6): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 C:\xampp\htdocs\stallion\app\controllers\ApiController.php(6): Illuminate\Support\Facades\View::make('api.index')
+#5 [internal function]: ApiController->getIndex()
+#6 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('getIndex', Array)
+#8 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(ApiController), Object(Illuminate\Routing\Route), 'getIndex')
+#9 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(962): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'ApiController', 'getIndex')
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#11 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Route.php(109): call_user_func_array(Object(Closure), Array)
+#12 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1028): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#17 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Session\Middleware.php(72): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#18 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Cookie\Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#19 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Cookie\Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#20 C:\xampp\htdocs\stallion\vendor\stack\builder\src\Stack\StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#21 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#23 {main} [] []
+[2014-10-08 02:07:19] production.ERROR: exception 'ErrorException' with message 'Undefined variable: id' in C:\xampp\htdocs\stallion\app\controllers\ApiController.php:9
+Stack trace:
+#0 C:\xampp\htdocs\stallion\app\controllers\ApiController.php(9): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 9, Array)
+#1 [internal function]: ApiController->getIndex()
+#2 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('getIndex', Array)
+#4 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(ApiController), Object(Illuminate\Routing\Route), 'getIndex')
+#5 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(962): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'ApiController', 'getIndex')
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#7 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Route.php(109): call_user_func_array(Object(Closure), Array)
+#8 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1028): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Session\Middleware.php(72): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Cookie\Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#15 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Cookie\Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#16 C:\xampp\htdocs\stallion\vendor\stack\builder\src\Stack\StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#17 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-10-08 02:10:06] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'CreateProject' not found' in C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:301
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-08 02:18:40] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Users' not found' in C:\xampp\htdocs\stallion\app\controllers\ApiController.php:6
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-08 02:18:48] production.ERROR: exception 'ErrorException' with message 'Undefined variable: user' in C:\xampp\htdocs\stallion\app\controllers\ApiController.php:7
+Stack trace:
+#0 C:\xampp\htdocs\stallion\app\controllers\ApiController.php(7): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 7, Array)
+#1 [internal function]: ApiController->getIndex()
+#2 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('getIndex', Array)
+#4 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(ApiController), Object(Illuminate\Routing\Route), 'getIndex')
+#5 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(962): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'ApiController', 'getIndex')
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#7 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Route.php(109): call_user_func_array(Object(Closure), Array)
+#8 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1028): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Session\Middleware.php(72): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Cookie\Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#15 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Cookie\Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#16 C:\xampp\htdocs\stallion\vendor\stack\builder\src\Stack\StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#17 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-10-08 02:19:19] production.ERROR: exception 'ErrorException' with message 'Undefined variable: user' in C:\xampp\htdocs\stallion\app\controllers\ApiController.php:7
+Stack trace:
+#0 C:\xampp\htdocs\stallion\app\controllers\ApiController.php(7): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 7, Array)
+#1 [internal function]: ApiController->getIndex()
+#2 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('getIndex', Array)
+#4 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(ApiController), Object(Illuminate\Routing\Route), 'getIndex')
+#5 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(962): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'ApiController', 'getIndex')
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#7 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Route.php(109): call_user_func_array(Object(Closure), Array)
+#8 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1028): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Routing\Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\stallion\vendor\barryvdh\laravel-debugbar\src\Middleware.php(33): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Session\Middleware.php(72): Barryvdh\Debugbar\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Cookie\Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#15 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Cookie\Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#16 C:\xampp\htdocs\stallion\vendor\stack\builder\src\Stack\StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#17 C:\xampp\htdocs\stallion\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\stallion\public\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
